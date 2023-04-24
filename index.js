@@ -6,7 +6,7 @@ const fs = require("fs");
 const questions = [
   {
     type: "input",
-    name: "name",
+    name: "title",
     message: "What is the title of your project?",
   },
   {
@@ -38,11 +38,11 @@ const questions = [
     type: "list",
     name: "license",
     message: "Select preferred license",
-    choices: ["MIT", "Apache-2.0", "General Public License v3.0"],
+    choices: ["MIT", "Apache-2.0", "ISC", "GNUPv3.0"],
   },
   {
     type: "input",
-    name: "questions",
+    name: "github",
     message: "Enter your Github username",
   },
   {
@@ -52,8 +52,19 @@ const questions = [
   },
 ];
 
+const readMeTemplate = (questions) => ``;
+
+inquirer.prompt(questions).then((answers) => {
+  const nameOfFile = "README.md";
+  writeToFile(nameOfFile, answers);
+});
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, readMeTemplate(data), (err) =>
+    err ? console.log(err) : console.log("Successfully created README.md file!")
+  );
+}
 
 // TODO: Create a function to initialize app
 function init() {}
