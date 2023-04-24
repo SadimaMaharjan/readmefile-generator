@@ -48,13 +48,13 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
 
 ## Table Of Contents
-- [Project Description](#Description)
-- [Project Installation Instructions](#Installation)
-- [Project Usage](#Usage)
-- [Project Contribution Guidelines](#Contributing)
-- [Project Tests](#Tests)
-- [Licenses](#License)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
 ## Description
 ${data.description}
@@ -77,7 +77,12 @@ ${renderLicenseLink(data.license)}
 ${renderLicenseSection(data.license)}
 
 ## Questions
-${data.github}
+Please visit my github link to view the project:
+<br />
+[${data.github}](https://github.com/${data.github})
+<br />
+You can reach me on the below email if you have any further questions:
+<br />
 ${data.email}
 
 `;
