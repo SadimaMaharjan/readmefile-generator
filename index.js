@@ -57,7 +57,7 @@ function startProgram() {
   inquirer
     .prompt(questions)
     .then((answers) => {
-      const nameOfFile = "README.md";
+      const nameOfFile = "./dist/README.md";
       const markDownData = generateMarkdown(answers);
       writeToFile(nameOfFile, markDownData);
     })
