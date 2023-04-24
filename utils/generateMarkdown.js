@@ -2,11 +2,11 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "MIT") {
-    return `[!License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)`;
+    return `![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)`;
   } else if (license === "ISC") {
-    return `[!License: ISC](https://img.shields.io/badge/license-ISC-blue.svg)`;
+    return `![License: ISC](https://img.shields.io/badge/license-ISC-blue.svg)`;
   } else if (license === "GNUPv3") {
-    return `[!License: GNUPv3](https://img.shields.io/badge/license-LGPL_v3-blue.svg)`;
+    return `![License: GNUPv3](https://img.shields.io/badge/license-LGPL_v3-blue.svg)`;
   } else {
     return "";
   }
@@ -16,11 +16,11 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "MIT") {
-    return `![License: MIT](https://opensource.org/license/mit/)`;
+    return `[License: MIT](https://opensource.org/license/mit/)`;
   } else if (license === "ISC") {
-    return `![License: ISC](https://opensource.org/license/isc-license-txt/)`;
+    return `[License: ISC](https://opensource.org/license/isc-license-txt/)`;
   } else if (license === "GNUPv3") {
-    return `![License: GNUPv3](https://www.gnu.org/licenses/gpl-3.0.en.html)`;
+    return `[License: GNUPv3](https://www.gnu.org/licenses/gpl-3.0.en.html)`;
   } else {
     return "";
   }
@@ -45,7 +45,7 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-${this.renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
 ## Table Of Contents
 - [Project Description](#Description)
@@ -72,8 +72,9 @@ ${data.contributing}
 ${data.tests}
 
 ## License
-${this.renderLicenseLink(data.license)}
-${this.renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
+<br />
+${renderLicenseSection(data.license)}
 
 ## Questions
 ${data.github}
