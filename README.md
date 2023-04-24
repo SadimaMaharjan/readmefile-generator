@@ -6,7 +6,7 @@ A node.js application that uses user input from inquirer to populate a README.md
 
 A walkthrough video demonstrating the functionality of the application is given below:
 
-[Click here to watch walkthroughvideo](./src/walkthroughvideo-readme_generator.webm)
+[Click here to watch walkthroughvideo](./src/walkthroughvideo-readme_generator.mp4)
 
 The application will be invoked by using the following command:
 
